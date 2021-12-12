@@ -2,7 +2,111 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
-  background-color: var(--white200);
+
   height: 100vh;
+  padding: 0 4rem;
+  background-color: var(--white200);
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  color: var(--primaryColor200);
+
+  width: 100%;
+  max-width: 110rem;
+}
+
+.photo {
+  position: relative;
+  height: 55rem;
+  width: 51rem;
+
+  overflow: hidden;
+  border-radius: var(--borderRadius100);
+
+  box-shadow: 0 4px 2rem var(--boxShadowColor100);
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.name {
+  position: relative;
+
+  font-size: 8rem;
+  font-family: "Yeseva One", sans-serif;
+  color: inherit;
+  line-height: 0.6;
+  font-weight: normal;
+  margin-bottom: 5rem;
+
+  span {
+    font-size: 5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    height: 2px;
+    width: 40%;
+
+    background-color: currentColor;
+  }
+}
+
+.skills {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.btnsContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.btn {
+  font-size: 2rem;
+  color: var(--dark100);
+  white-space: nowrap;
+
+  background-color: var(--white100);
+  padding: 1.2rem 2rem;
+  border-radius: var(--borderRadius100);
+  box-shadow: 0 4px 2rem var(--boxShadowColor200);
+
+  transition: all 0.25s;
+
+  &:hover {
+    transform: translateY(-0.4rem);
+  }
+  &:active {
+    transition: all 0.1s;
+    transform: translateY(0.2rem);
+  }
+}
+
+.btnProject {
+  flex: 3;
+
+  background-color: var(--primaryColor100);
+}
+
+.btnAbout {
+  flex: 1;
+  color: var(--dark200);
+
+  &:hover {
+    color: var(--dark100);
+  }
 }

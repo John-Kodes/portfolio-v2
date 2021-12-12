@@ -4,8 +4,9 @@
     "paths": {
       "@/components/*": ["components/*"],
       "@/config/*": ["config/*"],
+      "@/styles/*": ["styles/*"],
       "@/images/*": ["public/images/*"],
-      "@/styles/*": ["styles/*"]
+      "@/icons/*": ["public/icons/*"]
     }
   }
 }
