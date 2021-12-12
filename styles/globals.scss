@@ -1,0 +1,108 @@
+:root {
+  // FONT SIZE
+  --fontSize100: 1.6rem;
+  --fontSize200: 1.8rem;
+
+  // PRIMARY COLOR
+  --primaryColor100: #00f5c9;
+  --primaryColor200: #00baba;
+  --primaryColor300: #0098a1;
+
+  // WHITES
+  --white100: #fff;
+  --white200: #f6f7f9;
+
+  // DARKS
+  --dark100: #17204b;
+  --dark200: #5f6b98;
+  --dark300: #8d9dc9;
+
+  // BORDER RADIUS
+  --borderRadius100: 1.4rem;
+
+  // BOX SHADOW
+  --boxShadowColor100: rgba(0, 28, 177, 0.05);
+  --boxShadowColor100: rgba(0, 28, 177, 0.07);
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+
+  font-family: "Outfit", sans-serif;
+  font-size: var(--fontSize200);
+}
+
+p {
+  font-family: inherit;
+  font-size: var(--fontSize200);
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Yeseva One", sans-serif;
+  color: var(--dark100);
+}
+
+h2 {
+  font-size: 4.4rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+}
+
+h4 {
+  font-size: 2rem;
+  letter-spacing: 0.3rem;
+}
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+img {
+  display: block;
+}
+
+input {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+  font: inherit;
+}
+
+::selection {
+  background-color: var(--primaryColor100);
+  color: #000;
+  text-shadow: none;
+}
+
+.debugMe {
+  border: 1px solid orange;
+}
