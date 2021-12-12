@@ -1,6 +1,7 @@
 import Head from "next/head";
 // Components
-import Header from "@/components/header";
+import Header from "@/components/Header";
+import AboutMeSection from "@/components/AboutMe";
 // import styles from "../styles/Home.module.scss";
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      asdkgah
+      <AboutMeSection />
     </>
   );
 }

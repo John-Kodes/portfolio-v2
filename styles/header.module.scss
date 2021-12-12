@@ -4,7 +4,7 @@
   align-items: center;
 
   height: 100vh;
-  padding: 0 4rem;
+  padding: 0 var(--pagePadding100);
   background-color: var(--white200);
 }
 
@@ -16,7 +16,7 @@
   color: var(--primaryColor200);
 
   width: 100%;
-  max-width: 110rem;
+  max-width: var(--maxWidth100);
 }
 
 .photo {

@@ -2,7 +2,9 @@ import Image from "next/image";
 // Image
 import portrait from "@/images/johndanielseminemacaranas.jpg";
 // Styles
-import styles from "@/styles/header.module.scss";
+import styles from "@/styles/Header.module.scss";
+
+// TODO: credit jake as easter egg
 
 const Header = () => {
   const space = <>&nbsp;&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;</>;

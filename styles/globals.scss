@@ -14,7 +14,7 @@
 
   // DARKS
   --dark100: #17204b;
-  --dark200: #5f6b98;
+  --dark200: #5b6caa;
   --dark300: #8d9dc9;
 
   // BORDER RADIUS
@@ -23,6 +23,12 @@
   // BOX SHADOW
   --boxShadowColor100: rgba(0, 28, 177, 0.05);
   --boxShadowColor200: rgba(0, 28, 177, 0.07);
+
+  // MAX WIDTH
+  --maxWidth100: 110rem;
+
+  // PAGE PADDING
+  --pagePadding100: 4rem;
 }
 
 * {
@@ -46,12 +52,19 @@ p {
   font-family: inherit;
   font-size: var(--fontSize200);
   line-height: 1.5;
+  color: var(--dark300);
+
+  span {
+    font-weight: 600;
+    color: var(--dark200);
+  }
 }
 
 h1,
 h2,
 h3,
 h4 {
+  font-weight: normal;
   font-family: "Yeseva One", sans-serif;
   color: var(--dark100);
 }
@@ -65,8 +78,19 @@ h3 {
 }
 
 h4 {
+  font-family: "Outfit", sans-serif;
   font-size: 2rem;
   letter-spacing: 0.3rem;
+  color: var(--primaryColor200);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  padding: 12rem var(--pagePadding100);
 }
 
 a {
