@@ -1,8 +1,8 @@
 import Head from "next/head";
 // Components
 import Header from "@/components/Header";
-import AboutMeSection from "@/components/AboutMe";
-// import styles from "../styles/Home.module.scss";
+import AboutMeSection from "@/components/AboutMeSect";
+import ProjectsSection from "@/components/ProjectsSect";
 
 export default function Home() {
   return (
@@ -17,6 +17,7 @@ export default function Home() {
       </Head>
       <Header />
       <AboutMeSection />
+      <ProjectsSection />
     </>
   );
 }

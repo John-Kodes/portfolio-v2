@@ -1,0 +1,22 @@
+.section {
+  flex-direction: column;
+  gap: 4.4rem;
+
+  background-color: var(--white200);
+
+  .title {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 4.4rem;
+
+    h2 {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "\2022\2002";
+        right: 100%;
+      }
+    }
+  }
+}
