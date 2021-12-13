@@ -10,7 +10,7 @@ const AboutMeSection = () => {
       <div className={styles.content}>
         <div className={styles.textBox}>
           <h4>Get to know me!</h4>
-          <h2>&bull; About Me</h2>
+          <h2>&bull;&ensp;About Me</h2>
           <p>
             Hello! My name is John Daniel and I&apos;m based in California.
             I&apos;m a full stack developer (<span>MERN</span>) specializing in

@@ -7,7 +7,7 @@ import styles from "@/styles/Header.module.scss";
 // TODO: credit jake as easter egg
 
 const Header = () => {
-  const space = <>&nbsp;&nbsp;&nbsp;&nbsp;\&nbsp;&nbsp;&nbsp;&nbsp;</>;
+  const space = <>&ensp;&ensp;\&ensp;&ensp;</>;
 
   return (
     <header className={styles.header}>
