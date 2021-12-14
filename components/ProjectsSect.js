@@ -6,21 +6,13 @@ import ExternalLink from "@/icons/ExternalLink.svg";
 // Images
 import InternetFlicksThumb from "@/images/InternetFlicksThumb.jpg";
 import RestaurantThumb from "@/images/RestaurantThumb.jpg";
-import Poly from "@/images/polyBg.svg";
 import BlackJaxApiThumb from "@/images/BlackJaxApiThumb.svg";
 // Styles
 import styles from "@/styles/ProjectsSect.module.scss";
 
+// TODO: add framer-motion to blackjax thumbnail text
+
 const ProjectsSection = () => {
-  const space = <>&ensp;&ensp;</>;
-
-  const BlackJaxThumbnailStyle = {
-    backgroundImage: `linear-gradient(185deg, rgba(0, 0, 0, 0.9), #0f091ae2),
-url('../public/polyBg.svg')`,
-    backgroundAttachment: "fixed",
-    backgroundSize: "cover",
-  };
-
   return (
     <section className={styles.section}>
       <div className={styles.header}>
@@ -36,9 +28,12 @@ url('../public/polyBg.svg')`,
             experience. Practice your skills, earn points and see how you place
             on the leaderboard to see how you compare to other players.
           </p>
-          <p className={styles.tags}>
-            React{space}Redux{space}Router{space}Styled-Components
-          </p>
+          <ul className={styles.tags}>
+            <li>React</li>
+            <li>Redux</li>
+            <li>Router</li>
+            <li>Styled-Components</li>
+          </ul>
           <div className={styles.btnsBox}>
             <Link href="/" passHref>
               <button className={styles.btn}>
@@ -64,7 +59,6 @@ url('../public/polyBg.svg')`,
         </div>
 
         <div className={`${styles.thumbnail} ${styles.thumbnailBlackJax}`}>
-          {/* TODO: add framer-motion */}
           <h4>BlackJax</h4>
         </div>
       </div>
@@ -77,9 +71,13 @@ url('../public/polyBg.svg')`,
             stored using MongoDB. Sensitive user data is prevented from leaking
             during API calls. bcrypt is used to encrypt user passwords.
           </p>
-          <p className={styles.tags}>
-            Heroku{space}Node.js{space}Express.js{space}MongoDB{space}NoSQL
-          </p>
+          <ul className={styles.tags}>
+            <li>Heroku</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+            <li>NoSQL</li>
+          </ul>
           <div className={styles.btnsBox}>
             <Link href="/" passHref>
               <button className={styles.btn}>
@@ -123,9 +121,11 @@ url('../public/polyBg.svg')`,
             cast members. This project uses the TMDB API. The UI is inspired by
             the streaming service, Netflix.
           </p>
-          <p className={styles.tags}>
-            Next.js{space}TMDB API{space}Authentication
-          </p>
+          <ul className={styles.tags}>
+            <li>Next.js</li>
+            <li>TMDB API</li>
+            <li>Authentication</li>
+          </ul>
           <div className={styles.btnsBox}>
             <Link href="/" passHref>
               <button className={styles.btn}>
@@ -170,9 +170,12 @@ url('../public/polyBg.svg')`,
             for a restaurant to answer the most common questions from current
             and potentially new customers for high conversion rate.
           </p>
-          <p className={styles.tags}>
-            React{space}Framer-motion{space}Styled-Components{space}Flexbox
-          </p>
+          <ul className={styles.tags}>
+            <li>React</li>
+            <li>Framer-Motion</li>
+            <li>Styled-Components</li>
+            <li>Flexbox</li>
+          </ul>
           <div className={styles.btnsBox}>
             <Link href="/" passHref>
               <button className={styles.btn}>
