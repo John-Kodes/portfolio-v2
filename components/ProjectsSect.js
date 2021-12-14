@@ -5,13 +5,21 @@ import githubSmall from "@/icons/githubSmall.svg";
 import ExternalLink from "@/icons/ExternalLink.svg";
 // Images
 import InternetFlicksThumb from "@/images/InternetFlicksThumb.jpg";
-import BlackJaxApiThumb from "@/images/BlackJaxApiThumb.svg";
 import RestaurantThumb from "@/images/RestaurantThumb.jpg";
+import Poly from "@/images/polyBg.svg";
+import BlackJaxApiThumb from "@/images/BlackJaxApiThumb.svg";
 // Styles
 import styles from "@/styles/ProjectsSect.module.scss";
 
 const ProjectsSection = () => {
   const space = <>&ensp;&ensp;</>;
+
+  const BlackJaxThumbnailStyle = {
+    backgroundImage: `linear-gradient(185deg, rgba(0, 0, 0, 0.9), #0f091ae2),
+url('../public/polyBg.svg')`,
+    backgroundAttachment: "fixed",
+    backgroundSize: "cover",
+  };
 
   return (
     <section className={styles.section}>
@@ -55,9 +63,9 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <div className={styles.thumbnail}>
-          {/* TODO: Create interactive thumbnail */}
-          thumbnail
+        <div className={`${styles.thumbnail} ${styles.thumbnailBlackJax}`}>
+          {/* TODO: add framer-motion */}
+          <h4>BlackJax</h4>
         </div>
       </div>
 
