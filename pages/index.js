@@ -3,6 +3,7 @@ import Head from "next/head";
 import Header from "@/components/Header";
 import AboutMeSection from "@/components/AboutMeSect";
 import ProjectsSection from "@/components/ProjectsSect";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Header />
       <AboutMeSection />
       <ProjectsSection />
+      <Footer />
     </>
   );
 }
