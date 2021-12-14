@@ -3,6 +3,10 @@ import Link from "next/link";
 // Icons
 import githubSmall from "@/icons/githubSmall.svg";
 import ExternalLink from "@/icons/ExternalLink.svg";
+// Images
+import InternetFlicksThumb from "@/images/InternetFlicksThumb.jpg";
+import BlackJaxApiThumb from "@/images/BlackJaxApiThumb.svg";
+import RestaurantThumb from "@/images/RestaurantThumb.jpg";
 // Styles
 import styles from "@/styles/ProjectsSect.module.scss";
 
@@ -51,7 +55,10 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <div className={styles.thumbnail}>thumbnail</div>
+        <div className={styles.thumbnail}>
+          {/* TODO: Create interactive thumbnail */}
+          thumbnail
+        </div>
       </div>
 
       <div className={styles.projectBox}>
@@ -89,7 +96,15 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <div className={styles.thumbnail}>thumbnail</div>
+        <div className={styles.thumbnail}>
+          <Image
+            src={InternetFlicksThumb}
+            alt="Internet Flicks"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top left"
+          />
+        </div>
       </div>
 
       <div className={styles.projectBox}>
@@ -127,7 +142,15 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <div className={styles.thumbnail}>thumbnail</div>
+        <div className={styles.thumbnail}>
+          <Image
+            src={BlackJaxApiThumb}
+            alt="BlackJax Api"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
+        </div>
       </div>
 
       <div className={styles.projectBox}>
@@ -165,7 +188,15 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <div className={styles.thumbnail}>thumbnail</div>
+        <div className={styles.thumbnail}>
+          <Image
+            src={RestaurantThumb}
+            alt="John Daniel's Resturant Dubai"
+            layout="fill"
+            objectFit="cover"
+            objectPosition="top left"
+          />
+        </div>
       </div>
     </section>
   );
