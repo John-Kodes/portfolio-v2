@@ -6,8 +6,15 @@ import AboutMeSection from "@/components/AboutMeSect";
 import ProjectsSection from "@/components/ProjectsSect";
 import ContactSect from "@/components/ContactSect";
 import Footer from "@/components/Footer";
+// Observer
+import { useInView } from "react-intersection-observer";
+
+// TODO: make images start with compressed and blurred images
 
 export default function Home() {
+  // For navbar, to know if user has scrolled down
+  const [element, inView] = useInView();
+
   return (
     <>
       <Head>
@@ -18,7 +25,8 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
+      <div ref={element} style={{ height: "0.01px" }}></div>
+      <Nav inView={inView} />
       <Header />
       <AboutMeSection />
       <ProjectsSection />

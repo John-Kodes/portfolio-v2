@@ -6,10 +6,10 @@ import styles from "@/styles/Nav.module.scss";
 
 // TODO: make nav bar animated with framer-motion
 
-const Nav = () => {
+const Nav = ({ inView }) => {
   return (
     <nav className={styles.nav}>
-      <div className={styles.logo}>
+      <div className={`${styles.logo} ${!inView && styles.logoHide}`}>
         <Image
           src={Logo}
           alt="John Daniel Semine Macaranas Logo"
@@ -17,7 +17,7 @@ const Nav = () => {
           objectFit="contain"
         />
       </div>
-      <div className={styles.btnsBox}>
+      <div className={`${styles.btnsBox} ${inView && styles.btnsBoxInitial}`}>
         <button className={styles.link}>About</button>
         <button className={styles.link}>Projects</button>
         <button className={styles.link}>Contact</button>
