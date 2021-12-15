@@ -1,3 +1,10 @@
+import Image from "next/image";
+// Icons
+import email from "@/icons/email.svg";
+// Images
+import EnvelopeFront from "@/images/EnvelopeFront.svg";
+import EnvelopeBack from "@/images/EnvelopeBack.svg";
+// Styles
 import styles from "@/styles/ContactSect.module.scss";
 
 const ContactSect = () => {
@@ -66,6 +73,40 @@ const ContactSect = () => {
             Submit
           </button>
         </form>
+        <div className={styles.envelopeFront}>
+          <div className={styles.imageBox}>
+            <Image
+              src={EnvelopeFront}
+              alt="Envelope Front"
+              layout="fill"
+              objectFit="contain"
+              objectPosition="bottom"
+            />
+          </div>
+        </div>
+        <div className={styles.envelopeBack}>
+          <div className={styles.imageBox}>
+            <Image
+              src={EnvelopeBack}
+              alt="Envelope Back"
+              layout="fill"
+              objectFit="contain"
+              objectPosition="bottom"
+            />
+          </div>
+        </div>
+      </div>
+      <div className={styles.description}>
+        <a className={styles.myEmail}>
+          <div className={styles.icon}>
+            <Image src={email} layout="fill" objectFit="contain" />
+          </div>
+          johndanielsemine@gmail.com
+        </a>
+        <p>
+          I will get back to you within one to two days through email. Also
+          please don&apos;t forget to check your spam account just in case!
+        </p>
       </div>
     </section>
   );

@@ -34,6 +34,7 @@
   gap: 5.2rem;
 
   width: 100%;
+  z-index: 3;
 }
 
 .split {
@@ -98,3 +99,50 @@
 
 // .message {
 // }
+
+.envelopeFront {
+  position: absolute;
+  bottom: -4rem;
+
+  width: 110%;
+  height: 100%;
+}
+
+.envelopeBack {
+  position: absolute;
+  bottom: -4rem;
+  z-index: -1;
+
+  width: 110%;
+  height: 100%;
+}
+
+.imageBox {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  max-width: 69rem;
+
+  a {
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    font-size: var(--fontSize300);
+    color: var(--dark100);
+  }
+}
+
+.icon {
+  position: relative;
+  height: 3rem;
+  width: 3rem;
+}
