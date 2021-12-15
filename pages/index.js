@@ -1,5 +1,6 @@
 import Head from "next/head";
 // Components
+import Nav from "@/components/Nav";
 import Header from "@/components/Header";
 import AboutMeSection from "@/components/AboutMeSect";
 import ProjectsSection from "@/components/ProjectsSect";
@@ -17,6 +18,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Nav />
       <Header />
       <AboutMeSection />
       <ProjectsSection />

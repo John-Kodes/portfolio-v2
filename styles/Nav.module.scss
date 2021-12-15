@@ -1,0 +1,48 @@
+.nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  max-width: var(--maxWidth100);
+
+  z-index: 100;
+}
+
+.logo {
+  position: relative;
+  height: 4rem;
+  width: 7.5rem;
+}
+
+.btnsBox {
+  display: flex;
+  gap: 8rem;
+
+  color: var(--primaryColor300);
+
+  background-color: var(--white100);
+  padding: 1.2rem 3.8rem;
+  border-radius: 0 0 2.7rem 2.7rem;
+  box-shadow: 0 4px 2rem var(--boxShadowColor200);
+
+  > * {
+    color: inherit;
+  }
+}
+
+.link {
+}
+
+.resume {
+  color: var(--dark100);
+
+  padding: 1rem 1.5rem;
+  background-color: var(--primaryColor100);
+  border-radius: 4px;
+}
