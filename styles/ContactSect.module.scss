@@ -1,0 +1,100 @@
+.section {
+  flex-direction: column;
+  gap: 6rem;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6rem;
+
+  width: 69rem;
+  padding: 6.2rem 8rem 20rem;
+
+  background-color: var(--white200);
+  border: 4px solid var(--white300);
+  border-radius: var(--borderRadius100);
+  box-shadow: 0 4px 2rem var(--boxShadowColor90);
+}
+
+.title {
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "\2022\2002";
+    right: 100%;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 5.2rem;
+
+  width: 100%;
+}
+
+.split {
+  display: flex;
+  gap: 4rem;
+  > * {
+    width: 100%;
+  }
+}
+
+.inputBox {
+  position: relative;
+
+  input,
+  textarea {
+    color: var(--dark100);
+
+    width: 100%;
+    border-bottom: 3px solid var(--white400);
+    border-radius: 4px;
+
+    // When field contains a value
+    &:not(:placeholder-shown) + .label {
+      top: -2rem;
+      font-size: var(--fontSize100);
+    }
+  }
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  color: var(--dark200);
+  transition: all 0.25s;
+}
+
+.submitBtn {
+  align-self: center;
+
+  padding: 1rem 2rem;
+  background-color: var(--primaryColor90);
+  border-radius: var(--borderRadius100);
+
+  transition: all 0.25s;
+
+  &:hover,
+  &:focus {
+    background-color: var(--primaryColor100);
+  }
+}
+
+// .name {
+// }
+
+// .email {
+// }
+
+// .subject {
+// }
+
+// .message {
+// }

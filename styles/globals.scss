@@ -4,6 +4,7 @@
   --fontSize200: 1.8rem;
 
   // PRIMARY COLOR
+  --primaryColor90: #91ffde;
   --primaryColor100: #00f5c9;
   --primaryColor200: #00baba;
   --primaryColor300: #0098a1;
@@ -11,6 +12,8 @@
   // WHITES
   --white100: #fff;
   --white200: #f6f7f9;
+  --white300: #e7ecf4;
+  --white400: #d8dff0;
 
   // DARKS
   --dark100: #17204b;
@@ -21,6 +24,7 @@
   --borderRadius100: 1.4rem;
 
   // BOX SHADOW
+  --boxShadowColor90: rgba(0, 28, 177, 0.05);
   --boxShadowColor100: rgba(0, 28, 177, 0.07);
   --boxShadowColor200: rgba(0, 28, 177, 0.1);
 
@@ -101,7 +105,7 @@ a {
 
 button {
   background: none;
-  color: inherit;
+  color: var(--dark100);
   border: none;
   padding: 0;
   font: inherit;
@@ -117,12 +121,14 @@ ul {
   list-style-type: none;
 }
 
-input {
+input,
+textarea {
   border: none;
   background-color: transparent;
   box-shadow: none;
   outline: none;
   font: inherit;
+  resize: none;
 }
 
 ::selection {
