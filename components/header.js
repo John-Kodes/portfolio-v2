@@ -1,4 +1,6 @@
 import Image from "next/image";
+// Icons
+import camera from "@/icons/camera.svg";
 // Image
 import portrait from "@/images/johndanielseminemacaranas.jpg";
 // Styles
@@ -32,15 +34,28 @@ const Header = () => {
         </div>
 
         <div className={styles.photo}>
-          <Image
-            src={portrait}
-            layout="fill"
-            alt="John Daniel Semine Macaranas"
-            objectFit="cover"
-            objectPosition="top"
-            priority
-            placeholder="blur"
-          />
+          <div className={styles.photoFrame}>
+            <Image
+              src={portrait}
+              layout="fill"
+              alt="John Daniel Semine Macaranas"
+              objectFit="cover"
+              objectPosition="top"
+              priority
+              placeholder="blur"
+            />
+          </div>
+          <div className={styles.credit}>
+            <div className={styles.icon}>
+              <Image
+                src={camera}
+                layout="fill"
+                alt="camera"
+                objectFit="contain"
+              />
+            </div>
+            whaddup jake
+          </div>
         </div>
       </div>
     </header>

@@ -21,7 +21,7 @@ const Footer = () => {
             Built &amp; designed by John Daniel Semine
           </a>
           <br />
-          made with &hearts;
+          Made with &hearts;
         </p>
         <div className={styles.links}>
           <a

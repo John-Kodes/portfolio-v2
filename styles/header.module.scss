@@ -24,10 +24,44 @@
   height: 55rem;
   width: 51rem;
 
-  overflow: hidden;
   border-radius: var(--borderRadius100);
-  background-color: #c7cad4;
   box-shadow: 0 4px 2rem var(--boxShadowColor100);
+}
+
+.photoFrame {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+
+  border-radius: var(--borderRadius100);
+  overflow: hidden;
+}
+
+.credit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  transform: translateY(calc(100% - 1rem));
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  padding: 2rem 2rem 1rem;
+  background-color: var(--white100);
+  border-radius: var(--borderRadius100);
+  box-shadow: 0 4px 2rem var(--boxShadowColor100);
+
+  transition: all 0.5s;
+
+  .icon {
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+  }
 }
 
 .textBox {

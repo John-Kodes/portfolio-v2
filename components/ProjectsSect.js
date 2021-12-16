@@ -5,9 +5,7 @@ import githubSmall from "@/icons/githubSmall.svg";
 import ExternalLink from "@/icons/ExternalLink.svg";
 // Images
 import InternetFlicksThumb from "@/images/InternetFlicksThumb.jpg";
-import InternetFlicksThumbComp from "@/images/InternetFlicksThumb-comp.jpg";
 import RestaurantThumb from "@/images/RestaurantThumb.jpg";
-import RestaurantThumbComp from "@/images/RestaurantThumb-comp.jpg";
 import BlackJaxApiThumb from "@/images/BlackJaxApiThumb.svg";
 // Styles
 import styles from "@/styles/ProjectsSect.module.scss";
