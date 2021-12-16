@@ -65,18 +65,16 @@ const ProjectsSection = () => {
 
       <div className={styles.projectBox}>
         <div className={styles.textBox}>
-          <h3 className={styles.title}>BlackJax API</h3>
+          <h3 className={styles.title}>Internet Flicks</h3>
           <p className={styles.description}>
-            This RESTful API allows for users to create accounts which will be
-            stored using MongoDB. Sensitive user data is prevented from leaking
-            during API calls. bcrypt is used to encrypt user passwords.
+            An online database of information relating to movies, TV shows and
+            cast members. This project uses the TMDB API. The UI is inspired by
+            the streaming service, Netflix.
           </p>
           <ul className={styles.tags}>
-            <li>Heroku</li>
-            <li>Node.js</li>
-            <li>Express.js</li>
-            <li>MongoDB</li>
-            <li>NoSQL</li>
+            <li>Next.js</li>
+            <li>TMDB API</li>
+            <li>Authentication</li>
           </ul>
           <div className={styles.btnsBox}>
             <Link href="/" passHref>
@@ -115,16 +113,18 @@ const ProjectsSection = () => {
 
       <div className={styles.projectBox}>
         <div className={styles.textBox}>
-          <h3 className={styles.title}>Internet Flicks</h3>
+          <h3 className={styles.title}>BlackJax API</h3>
           <p className={styles.description}>
-            An online database of information relating to movies, TV shows and
-            cast members. This project uses the TMDB API. The UI is inspired by
-            the streaming service, Netflix.
+            This RESTful API allows for users to create accounts which will be
+            stored using MongoDB. Sensitive user data is prevented from leaking
+            during API calls. bcrypt is used to encrypt user passwords.
           </p>
           <ul className={styles.tags}>
-            <li>Next.js</li>
-            <li>TMDB API</li>
-            <li>Authentication</li>
+            <li>Heroku</li>
+            <li>Node.js</li>
+            <li>Express.js</li>
+            <li>MongoDB</li>
+            <li>NoSQL</li>
           </ul>
           <div className={styles.btnsBox}>
             <Link href="/" passHref>
