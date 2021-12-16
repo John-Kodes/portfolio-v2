@@ -5,12 +5,9 @@ import Logo from "@/icons/portfolioLogo.svg";
 // Styles
 import styles from "@/styles/Nav.module.scss";
 
-// TODO: Make background 100% width and white but blurry bg
-
 const Nav = ({ inView }) => {
   // page Y position
   const [y, setY] = useState(undefined);
-
   // if last scroll direction was up
   const [scrollUp, setScrollUp] = useState(false);
 

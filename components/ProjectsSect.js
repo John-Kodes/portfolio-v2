@@ -5,7 +5,9 @@ import githubSmall from "@/icons/githubSmall.svg";
 import ExternalLink from "@/icons/ExternalLink.svg";
 // Images
 import InternetFlicksThumb from "@/images/InternetFlicksThumb.jpg";
+import InternetFlicksThumbComp from "@/images/InternetFlicksThumb-comp.jpg";
 import RestaurantThumb from "@/images/RestaurantThumb.jpg";
+import RestaurantThumbComp from "@/images/RestaurantThumb-comp.jpg";
 import BlackJaxApiThumb from "@/images/BlackJaxApiThumb.svg";
 // Styles
 import styles from "@/styles/ProjectsSect.module.scss";
@@ -100,13 +102,16 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <div className={styles.thumbnail}>
+        <div
+          className={`${styles.thumbnail} ${styles.thumbnailInternetFlicks}`}
+        >
           <Image
             src={InternetFlicksThumb}
             alt="Internet Flicks"
             layout="fill"
             objectFit="cover"
             objectPosition="top left"
+            placeholder="blur"
           />
         </div>
       </div>
@@ -200,13 +205,14 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        <div className={styles.thumbnail}>
+        <div className={`${styles.thumbnail} ${styles.thumbnailJDR}`}>
           <Image
             src={RestaurantThumb}
             alt="John Daniel's Resturant Dubai"
             layout="fill"
             objectFit="cover"
             objectPosition="top left"
+            placeholder="blur"
           />
         </div>
       </div>

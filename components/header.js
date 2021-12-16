@@ -38,6 +38,8 @@ const Header = () => {
             alt="John Daniel Semine Macaranas"
             objectFit="cover"
             objectPosition="top"
+            priority
+            placeholder="blur"
           />
         </div>
       </div>
