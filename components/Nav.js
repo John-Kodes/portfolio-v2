@@ -1,14 +1,39 @@
+import { useEffect, useState } from "react";
 import Image from "next/image";
 // Icons
 import Logo from "@/icons/portfolioLogo.svg";
 // Styles
 import styles from "@/styles/Nav.module.scss";
 
-// TODO: make nav bar animated with framer-motion
+// TODO: Make background 100% width and white but blurry bg
 
 const Nav = ({ inView }) => {
+  // page Y position
+  const [y, setY] = useState(undefined);
+
+  // if last scroll direction was up
+  const [scrollUp, setScrollUp] = useState(false);
+
+  useEffect(() => {
+    // Finds scroll direction
+    if (!window) return;
+    setY(window.scrollY);
+
+    let prevScrollpos = window.scrollY;
+
+    window.onscroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      if (prevScrollpos > currentScrollPos) setScrollUp(true);
+
+      if (prevScrollpos < currentScrollPos) setScrollUp(false);
+
+      prevScrollpos = currentScrollPos;
+    };
+  }, [y]);
+
   return (
-    <nav className={styles.nav}>
+    <nav className={`${styles.nav} ${!scrollUp && !inView && styles.navHide}`}>
       <div className={`${styles.logo} ${!inView && styles.logoHide}`}>
         <Image
           src={Logo}
