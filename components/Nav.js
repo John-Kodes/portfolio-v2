@@ -5,6 +5,9 @@ import Logo from "@/icons/portfolioLogo.svg";
 // Styles
 import styles from "@/styles/Nav.module.scss";
 
+// TODO: Add scroll to functionality
+// TODO: Make hamburger for mobile
+
 const Nav = ({ inView }) => {
   // page Y position
   const [y, setY] = useState(undefined);

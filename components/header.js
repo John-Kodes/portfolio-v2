@@ -6,6 +6,9 @@ import portrait from "@/images/johndanielseminemacaranas.jpg";
 // Styles
 import styles from "@/styles/Header.module.scss";
 
+// TODO: Make buttons scroll to
+// TODO: Make letters floaty
+
 const Header = () => {
   const space = <>&ensp;&ensp;\&ensp;&ensp;</>;
 
