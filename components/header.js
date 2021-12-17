@@ -6,8 +6,6 @@ import portrait from "@/images/johndanielseminemacaranas.jpg";
 // Styles
 import styles from "@/styles/Header.module.scss";
 
-// TODO: credit jake as easter egg
-
 const Header = () => {
   const space = <>&ensp;&ensp;\&ensp;&ensp;</>;
 
@@ -54,7 +52,7 @@ const Header = () => {
                 objectFit="contain"
               />
             </div>
-            whaddup jake
+            Jake Agustin
           </div>
         </div>
       </div>
