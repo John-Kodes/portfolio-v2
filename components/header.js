@@ -5,8 +5,9 @@ import camera from "@/icons/camera.svg";
 import portrait from "@/images/johndanielseminemacaranas.jpg";
 // Styles
 import styles from "@/styles/Header.module.scss";
+import { motion } from "framer-motion";
 // Utils
-import { scrollToHandler } from "@/utils";
+import { scrollToHandler, floatTextMaker } from "@/utils";
 
 // TODO: Make buttons scroll to
 // TODO: Make letters floaty
@@ -19,9 +20,11 @@ const Header = () => {
       <div className={styles.content}>
         <div className={styles.textBox}>
           <h1 className={styles.name}>
-            John Daniel
+            {floatTextMaker("John Daniel")}
             <br />
-            <span>Semine Macaranas</span>
+            <span className={styles.lastName}>
+              {floatTextMaker("Semine Macaranas")}
+            </span>
           </h1>
           <p className={styles.skills}>
             Full-Stack Developer{space}MERN{space}Designer{space}Creative
