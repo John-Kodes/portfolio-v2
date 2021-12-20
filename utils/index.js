@@ -18,14 +18,6 @@ export const floatTextMaker = (text, y = -8) => {
     fontWeight: "inherit",
   };
 
-  /* 
-    font-size: 8rem;
-  font-family: "Yeseva One", sans-serif;
-  color: inherit;
-  line-height: 0.6;
-  font-weight: normal;
-*/
-
   return textArr.map((letter, i) => (
     <motion.span key={i} whileHover={{ y }} style={style}>
       {letter !== " " ? letter : <>&nbsp;</>}

@@ -16,6 +16,8 @@ import styles from "@/styles/AboutMeSect.module.scss";
 // Utils
 import { floatTextMaker } from "@/utils";
 
+// TODO: make section move/fade in in a staggering way
+
 const AboutMeSection = () => {
   return (
     <section id="section-about">

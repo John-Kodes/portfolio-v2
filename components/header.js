@@ -61,7 +61,6 @@ const Header = () => {
               objectFit="cover"
               objectPosition="top"
               priority
-              placeholder="blur"
             />
           </div>
           <div className={styles.credit}>
