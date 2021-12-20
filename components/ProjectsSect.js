@@ -1,14 +1,11 @@
 import Image from "next/image";
-import Link from "next/link";
 // Icons
 import githubSmall from "@/icons/githubSmall.svg";
 import ExternalLink from "@/icons/ExternalLink.svg";
-// Images
-import InternetFlicksThumb from "@/images/InternetFlicksThumb.jpg";
-import RestaurantThumb from "@/images/RestaurantThumb.jpg";
-import BlackJaxApiThumb from "@/images/BlackJaxApiThumb.svg";
 // Styles
 import styles from "@/styles/ProjectsSect.module.scss";
+// Animation
+import { motion } from "framer-motion";
 // Utils
 import { floatTextMaker } from "@/utils";
 // data
@@ -22,11 +19,16 @@ const ProjectsSection = () => {
       return (
         <div className={styles.projectBox} key={i}>
           <div className={styles.textBox}>
-            <h3 className={styles.title}>{project.title}</h3>
-            <p className={styles.description}>{project.description}</p>
+            <h3 className={styles.title}>{floatTextMaker(project.title)}</h3>
+            <motion.p
+              className={styles.description}
+              whileHover={{ x: i % 2 ? -10 : 10 }}
+            >
+              {project.description}
+            </motion.p>
             <ul className={styles.tags}>
               {project.tags.map((tag, i) => (
-                <li key={i}>{tag}</li>
+                <li key={i}>{floatTextMaker([tag], -4)}</li>
               ))}
             </ul>
             <div className={styles.btnsBox}>

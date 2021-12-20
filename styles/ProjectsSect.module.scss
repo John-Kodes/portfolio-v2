@@ -80,6 +80,47 @@
       position: relative;
       height: 3.8rem;
       width: 3.8rem;
+
+      @media (hover: hover) {
+        &,
+        &::before,
+        img {
+          transition: all 0.25s;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          height: 75%;
+          width: 75%;
+          opacity: 0;
+          background-color: var(--dark200);
+          border-radius: 100%;
+        }
+
+        &:hover {
+          img {
+            filter: brightness(200%);
+          }
+
+          &::before {
+            position: absolute;
+
+            height: 130%;
+            width: 130%;
+
+            opacity: 1;
+          }
+        }
+
+        &:active {
+          transform: translateY(4px);
+        }
+      }
     }
   }
 
