@@ -6,6 +6,7 @@ import portrait from "@/images/johndanielseminemacaranas.jpg";
 // Styles
 import styles from "@/styles/Header.module.scss";
 // Utils
+import { scrollToHandler } from "@/utils";
 
 // TODO: Make buttons scroll to
 // TODO: Make letters floaty
@@ -26,10 +27,16 @@ const Header = () => {
             Full-Stack Developer{space}MERN{space}Designer{space}Creative
           </p>
           <div className={styles.btnsContainer}>
-            <button className={`${styles.btn} ${styles.btnProject}`}>
+            <button
+              className={`${styles.btn} ${styles.btnProject}`}
+              onClick={() => scrollToHandler("section-projects")}
+            >
               Check some of my projects!
             </button>
-            <button className={`${styles.btn} ${styles.btnAbout}`}>
+            <button
+              className={`${styles.btn} ${styles.btnAbout}`}
+              onClick={() => scrollToHandler("section-about")}
+            >
               About me
             </button>
           </div>
