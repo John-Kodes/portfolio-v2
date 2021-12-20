@@ -23,15 +23,18 @@ const Header = () => {
             </span>
           </h1>
           <p className={styles.skills}>
-            {floatTextMaker([
-              ["Full-Stack Developer"],
-              space,
-              ["MERN"],
-              space,
-              ["Designer"],
-              space,
-              ["Creative"],
-            ])}
+            {floatTextMaker(
+              [
+                ["Full-Stack Developer"],
+                space,
+                ["MERN"],
+                space,
+                ["Designer"],
+                space,
+                ["Creative"],
+              ],
+              -12
+            )}
           </p>
           <div className={styles.btnsContainer}>
             <button

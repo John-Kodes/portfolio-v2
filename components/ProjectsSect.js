@@ -9,6 +9,8 @@ import RestaurantThumb from "@/images/RestaurantThumb.jpg";
 import BlackJaxApiThumb from "@/images/BlackJaxApiThumb.svg";
 // Styles
 import styles from "@/styles/ProjectsSect.module.scss";
+// Utils
+import {  floatTextMaker } from "@/utils";
 
 // TODO: add framer-motion to blackjax thumbnail text
 
