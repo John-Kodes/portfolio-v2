@@ -4,8 +4,9 @@ import Image from "next/image";
 import Logo from "@/icons/portfolioLogo.svg";
 // Styles
 import styles from "@/styles/Nav.module.scss";
+// Util
+import { scrollToHandler } from "../utils/index.js";
 
-// TODO: Add scroll to functionality
 // TODO: Make hamburger for mobile
 
 const Nav = ({ inView }) => {
@@ -14,8 +15,8 @@ const Nav = ({ inView }) => {
   // if last scroll direction was up
   const [scrollUp, setScrollUp] = useState(false);
 
+  // Finds scroll direction
   useEffect(() => {
-    // Finds scroll direction
     if (!window) return;
     setY(window.scrollY);
 
@@ -43,9 +44,24 @@ const Nav = ({ inView }) => {
         />
       </div>
       <div className={`${styles.btnsBox} ${inView && styles.btnsBoxInitial}`}>
-        <button className={styles.link}>About</button>
-        <button className={styles.link}>Projects</button>
-        <button className={styles.link}>Contact</button>
+        <button
+          className={styles.link}
+          onClick={() => scrollToHandler("section-about")}
+        >
+          About
+        </button>
+        <button
+          className={styles.link}
+          onClick={() => scrollToHandler("section-projects")}
+        >
+          Projects
+        </button>
+        <button
+          className={styles.link}
+          onClick={() => scrollToHandler("section-contact")}
+        >
+          Contact
+        </button>
         <button className={styles.resume}>Resume</button>
       </div>
     </nav>

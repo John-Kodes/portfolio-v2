@@ -18,7 +18,7 @@ import styles from "@/styles/AboutMeSect.module.scss";
 
 const AboutMeSection = () => {
   return (
-    <section>
+    <section id="section-about">
       <div className={styles.content}>
         <div className={styles.textBox}>
           <h4>Get to know me!</h4>

@@ -13,7 +13,7 @@ const Header = () => {
   const space = <>&ensp;&ensp;\&ensp;&ensp;</>;
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} id="header">
       <div className={styles.content}>
         <div className={styles.textBox}>
           <h1 className={styles.name}>

@@ -14,7 +14,7 @@ import styles from "@/styles/ProjectsSect.module.scss";
 
 const ProjectsSection = () => {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="section-projects">
       <div className={styles.header}>
         <h4>Stuff i&apos;ve made</h4>
         <h2>My Projects</h2>
