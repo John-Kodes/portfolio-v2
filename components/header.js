@@ -5,15 +5,11 @@ import camera from "@/icons/camera.svg";
 import portrait from "@/images/johndanielseminemacaranas.jpg";
 // Styles
 import styles from "@/styles/Header.module.scss";
-import { motion } from "framer-motion";
 // Utils
 import { scrollToHandler, floatTextMaker } from "@/utils";
 
-// TODO: Make buttons scroll to
-// TODO: Make letters floaty
-
 const Header = () => {
-  const space = <>&ensp;&ensp;\&ensp;&ensp;</>;
+  const space = <>&ensp;\&ensp;</>;
 
   return (
     <header className={styles.header} id="header">
@@ -27,7 +23,15 @@ const Header = () => {
             </span>
           </h1>
           <p className={styles.skills}>
-            Full-Stack Developer{space}MERN{space}Designer{space}Creative
+            {floatTextMaker([
+              ["Full-Stack Developer"],
+              space,
+              ["MERN"],
+              space,
+              ["Designer"],
+              space,
+              ["Creative"],
+            ])}
           </p>
           <div className={styles.btnsContainer}>
             <button
