@@ -5,6 +5,7 @@ import camera from "@/icons/camera.svg";
 import portrait from "@/images/johndanielseminemacaranas.jpg";
 // Styles
 import styles from "@/styles/Header.module.scss";
+// Utils
 
 // TODO: Make buttons scroll to
 // TODO: Make letters floaty

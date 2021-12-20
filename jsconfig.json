@@ -6,7 +6,8 @@
       "@/config/*": ["config/*"],
       "@/styles/*": ["styles/*"],
       "@/images/*": ["public/images/*"],
-      "@/icons/*": ["public/icons/*"]
+      "@/icons/*": ["public/icons/*"],
+      "@/utils": ["utils/index.js"]
     }
   }
 }

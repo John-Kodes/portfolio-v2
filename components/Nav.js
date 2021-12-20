@@ -5,7 +5,7 @@ import Logo from "@/icons/portfolioLogo.svg";
 // Styles
 import styles from "@/styles/Nav.module.scss";
 // Util
-import { scrollToHandler } from "../utils/index.js";
+import { scrollToHandler } from "@/utils";
 
 // TODO: Make hamburger for mobile
 

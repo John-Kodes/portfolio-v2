@@ -119,10 +119,16 @@
 
     &InternetFlicks {
       background-color: #7f5f8d;
+      img {
+        transition: all 0.5s;
+      }
     }
 
     &JDR {
       background-color: #f81141;
+      img {
+        transition: all 0.5s;
+      }
     }
   }
 }
