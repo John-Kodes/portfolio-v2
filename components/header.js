@@ -8,6 +8,8 @@ import styles from "@/styles/Header.module.scss";
 // Utils
 import { scrollToHandler, floatTextMaker } from "@/utils";
 
+// TODO: Create 404 page
+
 const Header = () => {
   const space = <>&ensp;\&ensp;</>;
 

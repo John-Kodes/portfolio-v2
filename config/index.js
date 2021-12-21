@@ -1,1 +1,1 @@
-EXAMPLE_ENV = process.env.EXAMPLE;
+export const URL = process.env.URL || "http://localhost:3000";

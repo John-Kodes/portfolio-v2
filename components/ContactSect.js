@@ -8,19 +8,21 @@ import EnvelopeBack from "@/images/EnvelopeBack.svg";
 import styles from "@/styles/ContactSect.module.scss";
 // Util
 import { floatTextMaker } from "@/utils";
+// config
+import { URL } from "@/config";
 
 const ContactSect = () => {
-  const submitHandler = (e) => {
-    e.preventDefault();
-    console.log("form submitted");
-  };
-
   return (
     <section className={styles.section} id="section-contact">
       <h4 className={styles.subTitle}>{floatTextMaker("Interested?")}</h4>
       <div className={styles.container}>
         <h2 className={styles.title}>{floatTextMaker("Let's Talk!")}</h2>
-        <form onSubmit={submitHandler} className={styles.form}>
+        <form
+          className={styles.form}
+          action="https://formsubmit.co/dc50902942819f9d99efb118269560aa"
+          method="POST"
+        >
+          <input type="hidden" name="_next" value={URL} />
           <div className={styles.split}>
             <div className={styles.inputBox}>
               <input
@@ -28,6 +30,7 @@ const ContactSect = () => {
                 placeholder=" "
                 className={styles.name}
                 id="name"
+                name="name"
                 required
               />
               <label htmlFor="name" className={styles.label}>
@@ -40,6 +43,7 @@ const ContactSect = () => {
                 placeholder=" "
                 className={styles.email}
                 id="email"
+                name="email"
                 required
               />
               <label htmlFor="email" className={styles.label}>
@@ -53,6 +57,7 @@ const ContactSect = () => {
               placeholder=" "
               className={styles.subject}
               id="subject"
+              name="_subject"
               required
             />
             <label htmlFor="subject" className={styles.label}>
@@ -64,6 +69,7 @@ const ContactSect = () => {
               placeholder=" "
               className={styles.message}
               id="message"
+              name="message"
               rows="4"
               required
             />
