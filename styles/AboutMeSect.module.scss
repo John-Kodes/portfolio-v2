@@ -64,6 +64,7 @@
   box-shadow: 0 4px 2rem var(--boxShadowColor200);
 
   overflow: hidden;
+  z-index: 2;
 
   .thumbnail {
     flex: 1;

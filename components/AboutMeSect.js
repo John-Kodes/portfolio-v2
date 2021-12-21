@@ -11,6 +11,8 @@ import Express from "@/icons/Express.svg";
 import MongoDB from "@/icons/MongoDB.svg";
 // Background
 import dots from "@/images/dotsBG.png";
+// Animations
+import { motion } from "framer-motion";
 // Styles
 import styles from "@/styles/AboutMeSect.module.scss";
 // Utils
@@ -19,6 +21,10 @@ import { floatTextMaker } from "@/utils";
 // TODO: make section move/fade in in a staggering way
 
 const AboutMeSection = () => {
+  const skillItemHover = {
+    scale: 1.1,
+  };
+
   return (
     <section id="section-about">
       <div className={styles.content}>
@@ -40,7 +46,7 @@ const AboutMeSection = () => {
         <div className={styles.skillsBox}>
           <h3>Technological Skills</h3>
           <div className={styles.itemsBox}>
-            <div className={styles.item}>
+            <motion.div className={styles.item} whileHover={skillItemHover}>
               <div className={styles.thumbnail}>
                 <Image
                   src={Html5}
@@ -50,8 +56,8 @@ const AboutMeSection = () => {
                 />
               </div>
               <p>HTML5</p>
-            </div>
-            <div className={styles.item}>
+            </motion.div>
+            <motion.div className={styles.item} whileHover={skillItemHover}>
               <div className={styles.thumbnail}>
                 <Image
                   src={CssAndScss}
@@ -61,8 +67,8 @@ const AboutMeSection = () => {
                 />
               </div>
               <p>CSS3 / SCSS</p>
-            </div>
-            <div className={styles.item}>
+            </motion.div>
+            <motion.div className={styles.item} whileHover={skillItemHover}>
               <div className={styles.thumbnail}>
                 <Image
                   src={JavaScript}
@@ -72,8 +78,8 @@ const AboutMeSection = () => {
                 />
               </div>
               <p>JavaScript</p>
-            </div>
-            <div className={styles.item}>
+            </motion.div>
+            <motion.div className={styles.item} whileHover={skillItemHover}>
               <div className={styles.thumbnail}>
                 <Image
                   src={React}
@@ -83,8 +89,8 @@ const AboutMeSection = () => {
                 />
               </div>
               <p>React</p>
-            </div>
-            <div className={styles.item}>
+            </motion.div>
+            <motion.div className={styles.item} whileHover={skillItemHover}>
               <div className={styles.thumbnail}>
                 <Image
                   src={Next}
@@ -94,8 +100,8 @@ const AboutMeSection = () => {
                 />
               </div>
               <p>Next.js</p>
-            </div>
-            <div className={styles.item}>
+            </motion.div>
+            <motion.div className={styles.item} whileHover={skillItemHover}>
               <div className={styles.thumbnail}>
                 <Image
                   src={GithubAndGit}
@@ -105,8 +111,8 @@ const AboutMeSection = () => {
                 />
               </div>
               <p>Github / Git</p>
-            </div>
-            <div className={styles.item}>
+            </motion.div>
+            <motion.div className={styles.item} whileHover={skillItemHover}>
               <div className={styles.thumbnail}>
                 <Image
                   src={Node}
@@ -116,8 +122,8 @@ const AboutMeSection = () => {
                 />
               </div>
               <p>Node.js</p>
-            </div>
-            <div className={styles.item}>
+            </motion.div>
+            <motion.div className={styles.item} whileHover={skillItemHover}>
               <div className={styles.thumbnail}>
                 <Image
                   src={Express}
@@ -127,8 +133,8 @@ const AboutMeSection = () => {
                 />
               </div>
               <p>Express.js</p>
-            </div>
-            <div className={styles.item}>
+            </motion.div>
+            <motion.div className={styles.item} whileHover={skillItemHover}>
               <div className={styles.thumbnail}>
                 <Image
                   src={MongoDB}
@@ -138,7 +144,7 @@ const AboutMeSection = () => {
                 />
               </div>
               <p>MongoDB</p>
-            </div>
+            </motion.div>
           </div>
           <p className={styles.more}>...and more</p>
           <Image
