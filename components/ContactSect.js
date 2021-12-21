@@ -1,6 +1,7 @@
 import Image from "next/image";
+import { useEffect, useState } from "react";
 // Icons
-import email from "@/icons/email.svg";
+import emailIcon from "@/icons/email.svg";
 // Images
 import EnvelopeFront from "@/images/EnvelopeFront.svg";
 import EnvelopeBack from "@/images/EnvelopeBack.svg";
@@ -12,6 +13,19 @@ import { floatTextMaker } from "@/utils";
 import { URL } from "@/config";
 
 const ContactSect = () => {
+  const [isValid, setIsValid] = useState(false);
+  // FORM STATES
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    if (name !== "" && email !== "" && subject !== "" && message !== "")
+      setIsValid(true);
+    else setIsValid(false);
+  }, [name, email, subject, message]);
+
   return (
     <section className={styles.section} id="section-contact">
       <h4 className={styles.subTitle}>{floatTextMaker("Interested?")}</h4>
@@ -31,6 +45,7 @@ const ContactSect = () => {
                 className={styles.name}
                 id="name"
                 name="name"
+                onChange={(e) => setName(e.target.value)}
                 required
               />
               <label htmlFor="name" className={styles.label}>
@@ -44,6 +59,7 @@ const ContactSect = () => {
                 className={styles.email}
                 id="email"
                 name="email"
+                onChange={(e) => setEmail(e.target.value)}
                 required
               />
               <label htmlFor="email" className={styles.label}>
@@ -58,6 +74,7 @@ const ContactSect = () => {
               className={styles.subject}
               id="subject"
               name="_subject"
+              onChange={(e) => setSubject(e.target.value)}
               required
             />
             <label htmlFor="subject" className={styles.label}>
@@ -71,13 +88,18 @@ const ContactSect = () => {
               id="message"
               name="message"
               rows="4"
+              onChange={(e) => setMessage(e.target.value)}
               required
             />
             <label htmlFor="message" className={styles.label}>
               Message
             </label>
           </div>
-          <button className={styles.submitBtn} type="submit">
+          <button
+            className={styles.submitBtn}
+            disabled={!isValid}
+            type="submit"
+          >
             Submit
           </button>
         </form>
@@ -108,7 +130,12 @@ const ContactSect = () => {
       <div className={styles.description}>
         <a className={styles.myEmail}>
           <div className={styles.icon}>
-            <Image src={email} layout="fill" objectFit="contain" />
+            <Image
+              src={emailIcon}
+              alt="email"
+              layout="fill"
+              objectFit="contain"
+            />
           </div>
           johndanielsemine@gmail.com
         </a>
