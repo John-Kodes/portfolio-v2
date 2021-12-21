@@ -6,6 +6,8 @@ import EnvelopeFront from "@/images/EnvelopeFront.svg";
 import EnvelopeBack from "@/images/EnvelopeBack.svg";
 // Styles
 import styles from "@/styles/ContactSect.module.scss";
+// Util
+import { floatTextMaker } from "@/utils";
 
 const ContactSect = () => {
   const submitHandler = (e) => {
@@ -15,9 +17,9 @@ const ContactSect = () => {
 
   return (
     <section className={styles.section} id="section-contact">
-      <h4 className={styles.subTitle}>Interested?</h4>
+      <h4 className={styles.subTitle}>{floatTextMaker("Interested?")}</h4>
       <div className={styles.container}>
-        <h2 className={styles.title}>Let&apos;s Talk!</h2>
+        <h2 className={styles.title}>{floatTextMaker("Let's Talk!")}</h2>
         <form onSubmit={submitHandler} className={styles.form}>
           <div className={styles.split}>
             <div className={styles.inputBox}>
@@ -81,6 +83,7 @@ const ContactSect = () => {
               layout="fill"
               objectFit="contain"
               objectPosition="bottom"
+              draggable="false"
             />
           </div>
         </div>

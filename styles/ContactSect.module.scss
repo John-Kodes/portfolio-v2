@@ -21,6 +21,9 @@
 
 .title {
   position: relative;
+
+  z-index: 2;
+
   &::before {
     position: absolute;
     content: "\2022\2002";
