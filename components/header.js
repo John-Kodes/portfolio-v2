@@ -44,10 +44,10 @@ const Header = () => {
               Check some of my projects!
             </button>
             <button
-              className={`${styles.btn} ${styles.btnAbout}`}
-              onClick={() => scrollToHandler("section-about")}
+              className={`${styles.btn} ${styles.btnContact}`}
+              onClick={() => scrollToHandler("section-contact")}
             >
-              About me
+              Talk to me!
             </button>
           </div>
         </div>
