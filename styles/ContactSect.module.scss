@@ -137,16 +137,39 @@
   gap: 2rem;
 
   max-width: 69rem;
+}
 
-  a {
-    align-self: flex-start;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+.myEmail {
+  position: relative;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 
-    font-size: var(--fontSize300);
-    color: var(--dark100);
+  font-size: var(--fontSize300);
+  color: var(--dark100);
+
+  &:active span {
+    opacity: 1;
+    transition: opacity 0s 0s;
   }
+
+  span {
+    position: absolute;
+    left: calc(100% + 1rem);
+
+    font-size: var(--fontSize100);
+    color: var(--dark200);
+    white-space: nowrap;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 1s 3s;
+  }
+}
+.hidden {
+  opacity: 0;
 }
 
 .icon {

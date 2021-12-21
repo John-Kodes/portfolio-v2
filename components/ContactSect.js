@@ -13,12 +13,17 @@ import { floatTextMaker } from "@/utils";
 import { URL } from "@/config";
 
 const ContactSect = () => {
+  // FORM IS VALID
   const [isValid, setIsValid] = useState(false);
   // FORM STATES
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+
+  const saveToClipboard = () => {
+    navigator.clipboard.writeText("johndanielsemine@gmail.com");
+  };
 
   useEffect(() => {
     if (name !== "" && email !== "" && subject !== "" && message !== "")
@@ -128,7 +133,7 @@ const ContactSect = () => {
         </div>
       </div>
       <div className={styles.description}>
-        <a className={styles.myEmail}>
+        <a className={styles.myEmail} onClick={saveToClipboard}>
           <div className={styles.icon}>
             <Image
               src={emailIcon}
@@ -138,6 +143,7 @@ const ContactSect = () => {
             />
           </div>
           johndanielsemine@gmail.com
+          <span>saved to clipboard!</span>
         </a>
         <p>
           I will get back to you within one to two days through email. Also
