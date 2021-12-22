@@ -3,8 +3,8 @@
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
-  padding: 0 var(--pagePadding100);
+  min-height: 100vh;
+  padding: 9rem var(--pagePadding100);
   background-color: var(--white200);
 }
 
@@ -12,11 +12,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  gap: 4rem;
   color: var(--primaryColor200);
 
   width: 100%;
   max-width: var(--maxWidth100);
+
+  @media only screen and (max-width: 48em) {
+    flex-direction: column-reverse;
+  }
 }
 
 .photo {
@@ -29,6 +33,19 @@
 
   &:hover .credit {
     transform: translateY(calc(100% - 1rem));
+  }
+
+  @media only screen and (max-width: 48em) {
+    height: 85vw;
+    width: 77vw;
+
+    margin-top: 2rem;
+    box-shadow: none;
+
+    .credit {
+      visibility: hidden;
+      display: none;
+    }
   }
 }
 
@@ -72,6 +89,16 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+
+  @media only screen and (max-width: 75em) {
+    flex: 0 0 40.1vw;
+    gap: 1.6vw;
+  }
+
+  @media only screen and (max-width: 48em) {
+    width: 77vw;
+    gap: 5vw;
+  }
 }
 
 .name {
@@ -82,6 +109,7 @@
   color: inherit;
   line-height: 0.6;
   font-weight: normal;
+
   margin-bottom: 5rem;
 
   .lastName {
@@ -100,6 +128,31 @@
 
     background-color: currentColor;
   }
+
+  @media only screen and (max-width: 75em) {
+    font-size: 6.65vw;
+    margin-bottom: 4.2vw;
+
+    .lastName {
+      font-size: 4.17vw;
+    }
+
+    &::before {
+      bottom: -4vw;
+    }
+  }
+
+  @media only screen and (max-width: 48em) {
+    font-size: 12.82vw;
+
+    .lastName {
+      font-size: 8vw;
+    }
+
+    &::before {
+      bottom: -6vw;
+    }
+  }
 }
 
 .skills {
@@ -109,12 +162,33 @@
   font-size: 1.8rem;
   text-align: center;
   color: var(--primaryColor200);
+
+  @media only screen and (max-width: 75em) {
+    font-size: 1.5vw;
+  }
+
+  @media only screen and (max-width: 48em) {
+    font-size: 3vw;
+  }
 }
 
 .btnsContainer {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
+
+  @media only screen and (max-width: 75em) {
+    gap: 2vw;
+  }
+
+  @media only screen and (max-width: 27em) {
+    gap: 4vw;
+    flex-direction: column;
+
+    .btn:last-child {
+      align-self: flex-end;
+    }
+  }
 }
 
 .btn {
@@ -129,9 +203,26 @@
 
   transition: all 0.25s;
 
+  @media only screen and (max-width: 75em) {
+    font-size: 1.67vw;
+
+    padding: 0.9vw 1.6vw;
+  }
+
+  @media only screen and (max-width: 48em) {
+    font-size: 3vw;
+    padding: 1.5vw 2.65vw;
+  }
+
+  @media only screen and (max-width: 27em) {
+    font-size: 5vw;
+    padding: 1.5vw 8vw;
+  }
+
   &:hover {
     transform: translateY(-0.4rem);
   }
+
   &:active {
     transition: all 0.1s;
     transform: translateY(0.2rem);

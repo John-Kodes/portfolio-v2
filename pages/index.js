@@ -9,8 +9,6 @@ import Footer from "@/components/Footer";
 // Observer
 import { useInView } from "react-intersection-observer";
 
-// TODO: make images start with compressed and blurred images
-
 export default function Home() {
   // For navbar, to know if user has scrolled down
   const [element, inView] = useInView();

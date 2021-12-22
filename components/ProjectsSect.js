@@ -11,8 +11,6 @@ import { floatTextMaker } from "@/utils";
 // data
 import data from "../data/projects";
 
-// TODO: add framer-motion to blackjax thumbnail text
-
 const ProjectsSection = () => {
   const renderProjects = (data) => {
     return data.map((project, i) => {
