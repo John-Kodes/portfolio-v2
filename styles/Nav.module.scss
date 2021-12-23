@@ -42,6 +42,11 @@
   visibility: hidden;
 }
 
+.logoFade {
+  transform: translateX(-13rem);
+  transition: all 0.5s 0s;
+}
+
 .btnsBox {
   align-self: flex-start;
 
@@ -111,12 +116,38 @@
 }
 
 // NAV FOR MOBILE
+.overlay {
+  @media only screen and (max-width: 48em) {
+    display: flex;
+    visibility: visible;
+  }
+  visibility: hidden;
+  display: none;
+
+  position: fixed;
+  z-index: 80;
+
+  height: 100vh;
+  width: 100vw;
+
+  background-color: #0009;
+
+  transition: all 0.5s 0.15s;
+}
+
+.overlayHidden {
+  opacity: 0;
+  visibility: hidden;
+
+  transition: all 0.5s 0.25s;
+}
 
 .hamburger {
   @media only screen and (max-width: 48em) {
     display: flex;
     visibility: visible;
   }
+
   display: none;
   visibility: hidden;
   justify-content: center;
@@ -193,4 +224,53 @@
       width: 70%;
     }
   }
+}
+
+.navPage {
+  @media only screen and (max-width: 48em) {
+    display: flex;
+    visibility: visible;
+  }
+
+  visibility: hidden;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 90;
+
+  height: 100vh;
+  width: 70vw;
+  background-color: var(--primaryColor100);
+
+  transition: all 0.75s 0.2s;
+
+  .pageLink,
+  .pageResume {
+    color: var(--dark100);
+    font-size: var(--fontSize300);
+    font-weight: 600;
+
+    cursor: pointer;
+  }
+
+  .pageResume {
+    color: var(--dark200);
+
+    padding: 1.2rem 2.4rem;
+    background-color: var(--white100);
+    border-radius: var(--borderRadius100);
+    box-shadow: 0 4px 2rem var(--boxShadowColor200);
+  }
+}
+
+.navPageHide {
+  right: -70vw;
+
+  transition: all 0.75s 0s;
 }
