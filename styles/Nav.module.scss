@@ -34,6 +34,10 @@
   @media only screen and (max-width: 70.75em) {
     margin-left: 4rem;
   }
+
+  @media only screen and (max-width: 48em) {
+    margin-top: 1rem;
+  }
 }
 
 .logoHide {
@@ -156,7 +160,7 @@
   height: 6rem;
   width: 6rem;
 
-  margin: 1rem 4rem 0 0;
+  margin: 1rem 2rem 0 0;
   background-color: var(--white100);
   border-radius: 100%;
   box-shadow: 0 4px 2rem var(--boxShadowColor200);

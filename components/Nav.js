@@ -43,7 +43,7 @@ const Nav = ({ inView }) => {
   useEffect(() => {
     if (!document) return;
 
-    if (!isActive) document.body.style.overflow = "hidden";
+    if (isActive) document.body.style.overflow = "hidden";
     else document.body.style.overflowY = "scroll";
   }, [isActive]);
 
@@ -54,7 +54,7 @@ const Nav = ({ inView }) => {
       >
         <div
           className={`${styles.logo} ${
-            (!inView && styles.logoHide) || (!isActive && styles.logoFade)
+            (!inView && styles.logoHide) || (isActive && styles.logoFade)
           }`}
         >
           <Image
@@ -90,10 +90,10 @@ const Nav = ({ inView }) => {
           className={styles.hamburger}
           onClick={() => setIsActive(!isActive)}
         >
-          <div className={`${styles.line} ${!isActive && styles.lineActive}`} />
+          <div className={`${styles.line} ${isActive && styles.lineActive}`} />
         </div>
       </nav>
-      <ul className={`${styles.navPage} ${isActive && styles.navPageHide}`}>
+      <ul className={`${styles.navPage} ${!isActive && styles.navPageHide}`}>
         <li
           className={styles.pageLink}
           onClick={() => {
@@ -121,7 +121,7 @@ const Nav = ({ inView }) => {
         <li className={styles.pageResume}>Resume</li>
       </ul>
       <div
-        className={`${styles.overlay} ${isActive && styles.overlayHidden}`}
+        className={`${styles.overlay} ${!isActive && styles.overlayHidden}`}
       />
     </>
   );
