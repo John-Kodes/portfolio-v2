@@ -21,11 +21,19 @@
 
 .logo {
   align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   position: relative;
-  height: 6rem;
+  height: 7.5rem;
   width: 7.5rem;
 
   transition: all 0.5s 0.5s;
+
+  @media only screen and (max-width: 70.75em) {
+    margin-left: 4rem;
+  }
 }
 
 .logoHide {
@@ -35,6 +43,8 @@
 }
 
 .btnsBox {
+  align-self: flex-start;
+
   display: flex;
   gap: 8rem;
 
@@ -50,6 +60,11 @@
 
   > * {
     color: inherit;
+  }
+
+  @media only screen and (max-width: 48em) {
+    display: none;
+    visibility: hidden;
   }
 }
 
@@ -92,5 +107,90 @@
 
   &:active {
     transform: translateY(2px);
+  }
+}
+
+// NAV FOR MOBILE
+
+.hamburger {
+  @media only screen and (max-width: 48em) {
+    display: flex;
+    visibility: visible;
+  }
+  display: none;
+  visibility: hidden;
+  justify-content: center;
+  align-items: center;
+
+  height: 6rem;
+  width: 6rem;
+
+  margin: 1rem 4rem 0 0;
+  background-color: var(--white100);
+  border-radius: 100%;
+  box-shadow: 0 4px 2rem var(--boxShadowColor200);
+
+  cursor: pointer;
+
+  @mixin pseudoLine {
+    content: "";
+    position: absolute;
+    right: 0;
+
+    height: 100%;
+    width: 100%;
+
+    background-color: inherit;
+    border-radius: inherit;
+
+    transition: inherit;
+  }
+
+  .line {
+    position: relative;
+
+    height: 4px;
+    width: 50%;
+
+    background-color: var(--dark300);
+    border-radius: 8rem;
+
+    transition: all 0.6s;
+
+    &::before {
+      @include pseudoLine;
+      top: -1rem;
+    }
+
+    &::after {
+      @include pseudoLine;
+      top: 1rem;
+    }
+  }
+
+  .lineActive {
+    transform: rotate(360deg);
+
+    background-color: var(--dark300);
+
+    &::before {
+      @include pseudoLine;
+
+      top: -1rem;
+      right: -4px;
+      transform: rotate(45deg);
+      transform-origin: 6px center;
+      width: 70%;
+    }
+
+    &::after {
+      @include pseudoLine;
+
+      top: 1rem;
+      right: -4px;
+      transform: rotate(-45deg);
+      transform-origin: 6px center;
+      width: 70%;
+    }
   }
 }

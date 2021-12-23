@@ -14,6 +14,8 @@ const Nav = ({ inView }) => {
   const [y, setY] = useState(undefined);
   // if last scroll direction was up
   const [scrollUp, setScrollUp] = useState(false);
+  // hamburger state
+  const [isActive, setIsActive] = useState(false);
 
   // Finds scroll direction
   useEffect(() => {
@@ -63,6 +65,9 @@ const Nav = ({ inView }) => {
           Contact
         </button>
         <button className={styles.resume}>Resume</button>
+      </div>
+      <div className={styles.hamburger} onClick={() => setIsActive(!isActive)}>
+        <div className={`${styles.line} ${isActive && styles.lineActive}`} />
       </div>
     </nav>
   );
