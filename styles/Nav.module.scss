@@ -245,7 +245,7 @@
   z-index: 90;
 
   height: 100vh;
-  width: 70vw;
+  width: 80vw;
   background-color: var(--primaryColor100);
 
   transition: all 0.75s 0.2s;
@@ -270,7 +270,7 @@
 }
 
 .navPageHide {
-  right: -70vw;
+  right: -80vw;
 
   transition: all 0.75s 0s;
 }

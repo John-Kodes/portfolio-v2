@@ -17,6 +17,11 @@ const Nav = ({ inView }) => {
   // hamburger state
   const [isActive, setIsActive] = useState(false);
 
+  const MobileScrollTo = (section) => {
+    scrollToHandler(section);
+    setIsActive(true);
+  };
+
   // Finds scroll direction
   useEffect(() => {
     if (!window) return;
@@ -89,9 +94,30 @@ const Nav = ({ inView }) => {
         </div>
       </nav>
       <ul className={`${styles.navPage} ${isActive && styles.navPageHide}`}>
-        <li className={styles.pageLink}>About</li>
-        <li className={styles.pageLink}>Projects</li>
-        <li className={styles.pageLink}>Contact</li>
+        <li
+          className={styles.pageLink}
+          onClick={() => {
+            MobileScrollTo("section-about");
+          }}
+        >
+          About
+        </li>
+        <li
+          className={styles.pageLink}
+          onClick={() => {
+            MobileScrollTo("section-projects");
+          }}
+        >
+          Projects
+        </li>
+        <li
+          className={styles.pageLink}
+          onClick={() => {
+            MobileScrollTo("section-contact");
+          }}
+        >
+          Contact
+        </li>
         <li className={styles.pageResume}>Resume</li>
       </ul>
       <div
