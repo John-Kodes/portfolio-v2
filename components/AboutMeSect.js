@@ -18,7 +18,6 @@ import styles from "@/styles/AboutMeSect.module.scss";
 // Utils
 import { floatTextMaker } from "@/utils";
 
-
 const AboutMeSection = () => {
   const skillItemHover = {
     scale: 1.1,
@@ -35,11 +34,10 @@ const AboutMeSection = () => {
             I&apos;m a full stack developer (<span>MERN</span>) specializing in
             front-end development. I create engaging and interactive
             experiences, and also functional interfaces using <span>React</span>{" "}
-            and <span>Next.js</span>.<br />I spend everyday improving both my
-            coding and design skills.
-            <br />
-            <br />I have a passion for writing code, learning, design and also
-            creating intuitive, dynamic user experiences.
+            and <span>Next.js</span>.
+            <br />I spend everyday improving both my coding and design skills. I
+            have a passion for writing code, learning, design and also creating
+            intuitive, dynamic user experiences.
           </p>
         </div>
         <div className={styles.skillsBox}>

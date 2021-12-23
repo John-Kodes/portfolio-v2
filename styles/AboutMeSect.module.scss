@@ -6,6 +6,11 @@
 
   width: 100%;
   max-width: var(--maxWidth100);
+
+  @media only screen and (max-width: 70.75em) {
+    flex-direction: column;
+    gap: 6rem;
+  }
 }
 
 .textBox {
@@ -14,7 +19,30 @@
   gap: 4.4rem;
 
   p {
-    max-width: 32ch;
+    max-width: 64ch;
+
+    @media only screen and (max-width: 70.75em) {
+      column-count: 2;
+      column-gap: 6rem;
+      column-rule: 3px dashed var(--white300);
+    }
+
+    @media only screen and (max-width: 37em) {
+      max-width: 32ch;
+      column-count: 1;
+    }
+  }
+
+  @media only screen and (max-width: 21.7em) {
+    h2 {
+      font-size: 3.8rem;
+    }
+  }
+
+  br {
+    display: block;
+    content: "";
+    margin: 2.4rem;
   }
 }
 
