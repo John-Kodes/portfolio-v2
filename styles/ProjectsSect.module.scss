@@ -24,7 +24,13 @@
     gap: clamp(7rem, 10vw, 10vw);
 
     .header {
-      margin-bottom: 4vw;
+      margin-bottom: 3vw;
+    }
+  }
+
+  @media only screen and (max-width: 27em) {
+    h2 {
+      font-size: 10.3vw;
     }
   }
 }
@@ -243,6 +249,16 @@
 
       &BlackJax .title {
         font-size: 13vw;
+      }
+    }
+
+    // restaurant landing page
+    @media only screen and (max-width: 27em) {
+      &:last-child {
+        .title {
+          font-size: 6vw;
+          white-space: nowrap;
+        }
       }
     }
   }
