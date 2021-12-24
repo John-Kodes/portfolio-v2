@@ -19,7 +19,7 @@ const Nav = ({ inView }) => {
 
   const MobileScrollTo = (section) => {
     scrollToHandler(section);
-    setIsActive(true);
+    setIsActive(false);
   };
 
   // Finds scroll direction
