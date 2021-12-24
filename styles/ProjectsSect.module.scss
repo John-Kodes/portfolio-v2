@@ -19,6 +19,14 @@
       }
     }
   }
+
+  @media only screen and (max-width: 53.12em) {
+    gap: clamp(7rem, 10vw, 10vw);
+
+    .header {
+      margin-bottom: 4vw;
+    }
+  }
 }
 
 .projectBox {
@@ -142,7 +150,7 @@
       background-attachment: fixed;
       background-size: cover;
 
-      h4 {
+      .title {
         position: absolute;
         display: flex;
         justify-content: center;
@@ -192,5 +200,87 @@
 
   .thumbnail {
     grid-column: 1/7;
+  }
+}
+
+// MOBILE ___________
+@media only screen and (max-width: 53.12em) {
+  .projectBox {
+    display: grid;
+    grid-template-rows: repeat(2, auto);
+    align-items: flex-start;
+    row-gap: 2rem;
+    width: 100%;
+
+    @media only screen and (max-width: 41.25em) {
+      grid-template-rows: repeat(2, auto);
+    }
+
+    .textBox {
+      grid-column: 1/9;
+      grid-row: 2/3;
+
+      padding-top: 0;
+
+      @media only screen and (max-width: 37em) {
+        grid-column: 1/-1;
+      }
+
+      .tags {
+        max-width: 90%;
+      }
+    }
+
+    .thumbnail {
+      grid-column: 1/10;
+      grid-row: 1/2;
+
+      min-height: 22rem;
+
+      @media only screen and (max-width: 37em) {
+        grid-column: 1/-1;
+      }
+
+      &BlackJax .title {
+        font-size: 13vw;
+      }
+    }
+  }
+
+  .projectBox:nth-child(2n + 1) {
+    .textBox {
+      grid-column: -9/-1;
+
+      .description {
+        text-align: end;
+      }
+
+      .tags {
+        justify-content: flex-end;
+      }
+      @media only screen and (max-width: 37em) {
+        grid-column: 1/-1;
+        align-items: flex-start;
+
+        .title {
+          text-align: start;
+        }
+
+        .description {
+          text-align: start;
+        }
+
+        .tags {
+          justify-content: flex-start;
+        }
+      }
+    }
+
+    .thumbnail {
+      grid-column: -10/-1;
+      @media only screen and (max-width: 37em) {
+        grid-column: 1/-1;
+      }
+    }
   }
 }

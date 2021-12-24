@@ -16,7 +16,7 @@ const data = [
     tags: ["React", "Redux", "Router", "Styled-Components"],
     thumbnail: (
       <div className={`${styles.thumbnail} ${styles.thumbnailBlackJax}`}>
-        <h4>{floatTextMaker("BlackJax")}</h4>
+        <div className={styles.title}>{floatTextMaker("BlackJax")}</div>
       </div>
     ),
     github: "https://github.com/John-Kodes/BlackJax",
