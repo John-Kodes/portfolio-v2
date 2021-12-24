@@ -9,9 +9,6 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.content}>
-        <a className={styles.email} href="mailto:johndanielsemine@gmail.com">
-          johndanielsemine@gmail.com
-        </a>
         <p className={styles.credit}>
           <a
             href="https://github.com/John-Kodes/portfolio-v2"
@@ -19,6 +16,10 @@ const Footer = () => {
             target="_blank"
           >
             Built &amp; designed by John Daniel Semine
+          </a>
+          <br />
+          <a className={styles.email} href="mailto:johndanielsemine@gmail.com">
+            johndanielsemine@gmail.com
           </a>
           <br />
           Made with &hearts;
