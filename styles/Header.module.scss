@@ -20,6 +20,12 @@
 
   @media only screen and (max-width: 48em) {
     flex-direction: column-reverse;
+
+    // BUGFIX: quick fix for adding the gap for iphone
+    gap: 0;
+    .textBox {
+      margin-top: 4rem;
+    }
   }
 }
 
