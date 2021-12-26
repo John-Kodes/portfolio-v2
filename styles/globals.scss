@@ -34,6 +34,28 @@
 
   // PAGE PADDING
   --pagePadding100: 4rem;
+
+  // // DARK MODE_____
+  // // PRIMARY COLOR
+  // --primaryColor90: #76e6c4;
+  // --primaryColor100: #4eccb5;
+  // --primaryColor200: #33a0a0;
+  // --primaryColor300: #00868d;
+
+  // // WHITES
+  // --white100: hsl(209, 100%, 12%);
+  // --white200: hsl(209, 100%, 9%);
+  // --white300: #e7ecf4;
+  // --white400: #d8dff0;
+
+  // // DARKS
+  // --dark100: #d0d4e7;
+  // --dark200: #b5c1eb;
+  // --dark300: #8d9dc9;
+  // // BOX SHADOW
+  // --boxShadowColor90: rgba(0, 6, 43, 0.5);
+  // --boxShadowColor100: rgba(4, 0, 44, 0.5);
+  // --boxShadowColor200: rgba(0, 4, 29, 0.3);
 }
 
 * {
@@ -48,6 +70,7 @@ html {
 
 body {
   box-sizing: border-box;
+  background-color: var(--white100);
 
   font-family: "Outfit", sans-serif;
   font-size: var(--fontSize200);
