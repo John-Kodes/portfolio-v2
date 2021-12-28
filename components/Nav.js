@@ -7,8 +7,6 @@ import styles from "@/styles/Nav.module.scss";
 // Util
 import { scrollToHandler } from "@/utils";
 
-// TODO: Make hamburger for mobile
-
 const Nav = ({ inView }) => {
   // page Y position
   const [y, setY] = useState(undefined);
@@ -83,7 +81,6 @@ const Nav = ({ inView }) => {
           >
             Contact
           </button>
-          <button className={styles.resume}>Resume</button>
         </div>
         {/* MOBILE HAMBURGER NAV */}
         <div
@@ -118,7 +115,6 @@ const Nav = ({ inView }) => {
         >
           Contact
         </li>
-        <li className={styles.pageResume}>Resume</li>
       </ul>
       <div
         className={`${styles.overlay} ${!isActive && styles.overlayHidden}`}

@@ -59,7 +59,7 @@
 
   color: var(--primaryColor300);
 
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--navWhite);
   padding: 1.2rem 3.8rem;
   border-radius: 0 0 2.7rem 2.7rem;
   box-shadow: 0 4px 2rem var(--boxShadowColor200);
@@ -86,6 +86,7 @@
 }
 
 .link {
+  padding: 1rem 0;
   @media (hover: hover) {
     transition: all 0.25s;
 
