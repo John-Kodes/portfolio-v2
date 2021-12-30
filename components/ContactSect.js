@@ -41,7 +41,11 @@ const ContactSect = () => {
           action="https://formsubmit.co/dc50902942819f9d99efb118269560aa"
           method="POST"
         >
-          <input type="hidden" name="_next" value={URL} />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://www.johndanielsemine.com/"
+          />
           <div className={styles.split}>
             <div className={styles.inputBox}>
               <input
