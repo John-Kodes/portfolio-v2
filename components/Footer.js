@@ -18,9 +18,9 @@ const Footer = () => {
             Built &amp; designed by John Daniel Semine
           </a>
           <br />
-          <a className={styles.email} href="mailto:johndanielsemine@gmail.com">
+          {/* <a className={styles.email} href="mailto:johndanielsemine@gmail.com">
             johndanielsemine@gmail.com
-          </a>
+          </a> */}
           <br />
           Made with &hearts;
         </p>

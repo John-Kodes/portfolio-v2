@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 // Icons
-import emailIcon from "@/icons/email.svg";
+// import emailIcon from "@/icons/email.svg";
 // Images
 import EnvelopeFront from "@/images/EnvelopeFront.svg";
 import EnvelopeBack from "@/images/EnvelopeBack.svg";
@@ -9,8 +9,6 @@ import EnvelopeBack from "@/images/EnvelopeBack.svg";
 import styles from "@/styles/ContactSect.module.scss";
 // Util
 import { floatTextMaker } from "@/utils";
-// config
-import { URL } from "@/config";
 
 const ContactSect = () => {
   // FORM IS VALID
@@ -137,7 +135,7 @@ const ContactSect = () => {
         </div>
       </div>
       <div className={styles.description}>
-        <a className={styles.myEmail} onClick={saveToClipboard}>
+        {/* <a className={styles.myEmail} onClick={saveToClipboard}>
           <div className={styles.icon}>
             <Image
               src={emailIcon}
@@ -148,7 +146,7 @@ const ContactSect = () => {
           </div>
           johndanielsemine@gmail.com
           <span>saved to clipboard!</span>
-        </a>
+        </a> */}
         <p>
           I will get back to you within one to two days through email. Also
           please don&apos;t forget to check your spam account just in case!
